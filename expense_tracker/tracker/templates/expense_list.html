@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense List</title>
+</head>
+<body>
+    <h1>Expense List</h1><br>
+    <a href="{% url 'add_expense' %}" style="text-decoration: none; color: white; background-color: brown;">ADD EXPENSES</a>
+    <ul>
+        {% for expense in expenses %}
+        <li>
+            {{expense.date}}:{{expense.category}} - ${{expense.amount}}
+            <a href="{% url 'delete_expense' expense.id %}" style="text-decoration: none; color: white; background-color: red;"> Delete</a>
+            <a href="{% url 'update_expense' expense.id %}"style="text-decoration: none; color: white; background-color: green;">Update</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
