@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('tracker', '0001_initial'),
+        ('expense_tracker.tracker', '0001_initial'),
     ]
 
     operations = [
@@ -16,3 +16,4 @@ class Migration(migrations.Migration):
             new_name='category',
         ),
     ]
+
