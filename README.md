@@ -47,7 +47,7 @@ A Django web application for tracking personal expenses.
    - **Name:** expense-tracker (or your preferred name)
    - **Environment:** Python
    - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `gunicorn expense_tracker.wsgi:application`
+   - **Start Command:** `gunicorn expense_tracker.expense_tracker.wsgi:application`
 
 3. **Set Environment Variables:**
    - `SECRET_KEY`: Generate a secure Django secret key
